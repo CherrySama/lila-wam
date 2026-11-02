@@ -1,0 +1,118 @@
+common:
+  action_dim: 7
+  state_dim: 7
+  action_chunk_size: 32
+  proprio_len: 1
+  num_inference_steps: 10
+  action_execution_horizon: 8
+dataset:
+  type: robotwin_panthera
+  dataset_dir:
+  - ./data/robotwin/move_pillbottle_pad/move_pillbottle_pad_panthera_single_dr
+  camera_names:
+  - head_camera
+  - wrist_camera
+  image_size:
+  - 320
+  - 240
+  fps: null
+  validation_fraction: 0.1
+  split_seed: 42
+  cache_dir: ./.cache/panthera_robotwin_frames
+  norm_stats_path: ./utils/stat-panthera-robotwin-train.json
+  norm_stats_key: panthera
+  image_aug: false
+  future_frame_offset: 32
+  indices_config:
+    state_indices:
+    - 0
+    camera_indices:
+    - 0
+    action_indices:
+    - 1
+    - 2
+    - 3
+    - 4
+    - 5
+    - 6
+    - 7
+    - 8
+    - 9
+    - 10
+    - 11
+    - 12
+    - 13
+    - 14
+    - 15
+    - 16
+    - 17
+    - 18
+    - 19
+    - 20
+    - 21
+    - 22
+    - 23
+    - 24
+    - 25
+    - 26
+    - 27
+    - 28
+    - 29
+    - 30
+    - 31
+    - 32
+model:
+  num_registers: 2
+  use_task_cond: false
+  vision_encoder:
+    checkpoint_path: ./dinov3_pretrain/dinov3-vitl16-pretrain-lvd1689m
+    feat_layers:
+    - -12
+    - -8
+    - -4
+    include_cls_register: true
+    fusion_mode: concat
+    concat:
+      proj_type: linear
+      pre_norm: true
+      out_dim: null
+  future_feat:
+    enabled: true
+    target_layer: -4
+    num_decoder_layers: 4
+    num_heads: 4
+  action_expert:
+    depth: 12
+    hidden_size: 768
+    num_heads: 8
+    vlm_adapter_num_queries: 64
+    adapter_depth: 4
+training:
+  seed: 42
+  batch_size: 32
+  grad_accum_steps: 1
+  time_sampler: logit_normal
+  time_mu: 0.0
+  time_sigma: 1.0
+  learning_rate: 0.0002
+  lr_min: 2.0e-05
+  weight_decay: 0.01
+  betas:
+  - 0.9
+  - 0.99
+  grad_clip_norm: 1.0
+  epochs: 40
+  save_interval_epoch: 5
+  validate: true
+  validation_seed: 31415
+  lambda_future_feat: 0.5
+  use_vel_weight: false
+  vel_weight_alpha: 0.2
+  vel_weight_sigma: 0.01
+inference:
+  smooth_actions: true
+  smooth_sigma: 1.0
+system:
+  num_workers: 4
+  pin_memory: true
+  cpu_threads: 8

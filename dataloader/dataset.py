@@ -378,6 +378,12 @@ def create_dataset(config: Any, val: bool = False):
     """
     Factory function: create a RobotWinTaskDataset instance (DINOv3 version)
     """
+    if config.dataset.get('type', 'robotwin') == 'lerobot':
+        from .lerobot_dataset import LeRobotDataset
+        return LeRobotDataset(config, val=val)
+    if config.dataset.get('type') == 'robotwin_panthera':
+        from .robotwin_panthera_dataset import RobotWinPantheraDataset
+        return RobotWinPantheraDataset(config, val=val)
     from omegaconf import OmegaConf
     indices_config = OmegaConf.to_container(config.dataset.indices_config, resolve=True)
 

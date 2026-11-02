@@ -1,0 +1,10 @@
+.venv/
+__pycache__/
+*.pyc
+.cache/
+dinov3_pretrain/
+checkpoints_vla/
+log/
+eval_result/
+dist/
+/data/

@@ -1,0 +1,307 @@
+{
+  "feature_names": {
+    "action": [
+      "joint1.pos",
+      "joint2.pos",
+      "joint3.pos",
+      "joint4.pos",
+      "joint5.pos",
+      "joint6.pos",
+      "gripper.pos"
+    ],
+    "observation.state": [
+      "joint1.pos",
+      "joint2.pos",
+      "joint3.pos",
+      "joint4.pos",
+      "joint5.pos",
+      "joint6.pos",
+      "gripper.pos"
+    ]
+  },
+  "split": {
+    "seed": 42,
+    "train": [
+      {
+        "dataset": "data/panthera/panthera_wrist_top_zero1",
+        "episode_index": 0
+      },
+      {
+        "dataset": "data/panthera/panthera_wrist_top_zero1",
+        "episode_index": 1
+      },
+      {
+        "dataset": "data/panthera/panthera_wrist_top_zero1",
+        "episode_index": 2
+      },
+      {
+        "dataset": "data/panthera/panthera_wrist_top_zero1",
+        "episode_index": 3
+      },
+      {
+        "dataset": "data/panthera/panthera_wrist_top_zero1",
+        "episode_index": 4
+      },
+      {
+        "dataset": "data/panthera/panthera_wrist_top_zero1",
+        "episode_index": 5
+      },
+      {
+        "dataset": "data/panthera/panthera_wrist_top_zero1",
+        "episode_index": 6
+      },
+      {
+        "dataset": "data/panthera/panthera_wrist_top_zero1",
+        "episode_index": 7
+      },
+      {
+        "dataset": "data/panthera/panthera_wrist_top_zero1",
+        "episode_index": 8
+      },
+      {
+        "dataset": "data/panthera/panthera_wrist_top_zero1",
+        "episode_index": 10
+      },
+      {
+        "dataset": "data/panthera/panthera_wrist_top_zero1",
+        "episode_index": 11
+      },
+      {
+        "dataset": "data/panthera/panthera_wrist_top_zero1",
+        "episode_index": 12
+      },
+      {
+        "dataset": "data/panthera/panthera_wrist_top_zero1",
+        "episode_index": 13
+      },
+      {
+        "dataset": "data/panthera/panthera_wrist_top_zero1",
+        "episode_index": 14
+      },
+      {
+        "dataset": "data/panthera/panthera_wrist_top_zero1",
+        "episode_index": 16
+      },
+      {
+        "dataset": "data/panthera/panthera_wrist_top_zero1",
+        "episode_index": 17
+      },
+      {
+        "dataset": "data/panthera/panthera_wrist_top_zero1",
+        "episode_index": 18
+      },
+      {
+        "dataset": "data/panthera/panthera_wrist_top_zero1",
+        "episode_index": 19
+      },
+      {
+        "dataset": "data/panthera/panthera_wrist_top_zero2",
+        "episode_index": 0
+      },
+      {
+        "dataset": "data/panthera/panthera_wrist_top_zero2",
+        "episode_index": 1
+      },
+      {
+        "dataset": "data/panthera/panthera_wrist_top_zero2",
+        "episode_index": 2
+      },
+      {
+        "dataset": "data/panthera/panthera_wrist_top_zero2",
+        "episode_index": 3
+      },
+      {
+        "dataset": "data/panthera/panthera_wrist_top_zero2",
+        "episode_index": 4
+      },
+      {
+        "dataset": "data/panthera/panthera_wrist_top_zero2",
+        "episode_index": 5
+      },
+      {
+        "dataset": "data/panthera/panthera_wrist_top_zero2",
+        "episode_index": 6
+      },
+      {
+        "dataset": "data/panthera/panthera_wrist_top_zero2",
+        "episode_index": 7
+      },
+      {
+        "dataset": "data/panthera/panthera_wrist_top_zero2",
+        "episode_index": 8
+      },
+      {
+        "dataset": "data/panthera/panthera_wrist_top_zero2",
+        "episode_index": 10
+      },
+      {
+        "dataset": "data/panthera/panthera_wrist_top_zero2",
+        "episode_index": 11
+      },
+      {
+        "dataset": "data/panthera/panthera_wrist_top_zero2",
+        "episode_index": 12
+      },
+      {
+        "dataset": "data/panthera/panthera_wrist_top_zero2",
+        "episode_index": 13
+      },
+      {
+        "dataset": "data/panthera/panthera_wrist_top_zero2",
+        "episode_index": 14
+      },
+      {
+        "dataset": "data/panthera/panthera_wrist_top_zero2",
+        "episode_index": 16
+      },
+      {
+        "dataset": "data/panthera/panthera_wrist_top_zero2",
+        "episode_index": 17
+      },
+      {
+        "dataset": "data/panthera/panthera_wrist_top_zero2",
+        "episode_index": 18
+      },
+      {
+        "dataset": "data/panthera/panthera_wrist_top_zero2",
+        "episode_index": 19
+      },
+      {
+        "dataset": "data/panthera/panthera_wrist_top_zero3",
+        "episode_index": 0
+      },
+      {
+        "dataset": "data/panthera/panthera_wrist_top_zero3",
+        "episode_index": 1
+      },
+      {
+        "dataset": "data/panthera/panthera_wrist_top_zero3",
+        "episode_index": 2
+      },
+      {
+        "dataset": "data/panthera/panthera_wrist_top_zero3",
+        "episode_index": 3
+      },
+      {
+        "dataset": "data/panthera/panthera_wrist_top_zero3",
+        "episode_index": 4
+      },
+      {
+        "dataset": "data/panthera/panthera_wrist_top_zero3",
+        "episode_index": 6
+      },
+      {
+        "dataset": "data/panthera/panthera_wrist_top_zero3",
+        "episode_index": 7
+      },
+      {
+        "dataset": "data/panthera/panthera_wrist_top_zero3",
+        "episode_index": 8
+      },
+      {
+        "dataset": "data/panthera/panthera_wrist_top_zero3",
+        "episode_index": 9
+      }
+    ],
+    "validation": [
+      {
+        "dataset": "data/panthera/panthera_wrist_top_zero1",
+        "episode_index": 9
+      },
+      {
+        "dataset": "data/panthera/panthera_wrist_top_zero1",
+        "episode_index": 15
+      },
+      {
+        "dataset": "data/panthera/panthera_wrist_top_zero2",
+        "episode_index": 9
+      },
+      {
+        "dataset": "data/panthera/panthera_wrist_top_zero2",
+        "episode_index": 15
+      },
+      {
+        "dataset": "data/panthera/panthera_wrist_top_zero3",
+        "episode_index": 5
+      }
+    ]
+  },
+  "panthera": {
+    "action": {
+      "min": [
+        -0.6547079086303711,
+        0.00376991112716496,
+        0.012566370889544487,
+        -0.2670353651046753,
+        -0.6063274145126343,
+        -0.6710441708564758,
+        0.3744778633117676
+      ],
+      "max": [
+        0.4423362910747528,
+        2.2047696113586426,
+        1.5896458625793457,
+        0.43730971217155457,
+        0.026389379054307938,
+        0.029530972242355347,
+        2.0546016693115234
+      ],
+      "mean": [
+        -0.08162959665060043,
+        1.3755877017974854,
+        0.7877301573753357,
+        0.08721880614757538,
+        -0.28047090768814087,
+        -0.255494624376297,
+        1.308541178703308
+      ],
+      "std": [
+        0.20003344118595123,
+        0.650899350643158,
+        0.429134726524353,
+        0.13873937726020813,
+        0.1675366312265396,
+        0.19549806416034698,
+        0.4373759925365448
+      ]
+    },
+    "state": {
+      "min": [
+        -0.6308318376541138,
+        0.011309733614325523,
+        0.011938052251935005,
+        -0.26389381289482117,
+        -0.5887344479560852,
+        -0.665389358997345,
+        0.013194689527153969
+      ],
+      "max": [
+        0.4253716766834259,
+        2.1746106147766113,
+        1.531212329864502,
+        0.39584067463874817,
+        0.016336282715201378,
+        0.015707964077591896,
+        2.0344955921173096
+      ],
+      "mean": [
+        -0.07902982085943222,
+        1.362837314605713,
+        0.7300083637237549,
+        0.057450421154499054,
+        -0.2719486355781555,
+        -0.23679107427597046,
+        1.3647907972335815
+      ],
+      "std": [
+        0.1956019103527069,
+        0.6578888893127441,
+        0.4198945462703705,
+        0.13138115406036377,
+        0.1684296578168869,
+        0.19136899709701538,
+        0.35270386934280396
+      ]
+    }
+  }
+}

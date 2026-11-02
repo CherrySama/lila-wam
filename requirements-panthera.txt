@@ -1,0 +1,15 @@
+--extra-index-url https://download.pytorch.org/whl/cu128
+torch==2.11.0+cu128
+torchvision==0.26.0+cu128
+transformers==5.5.4
+omegaconf==2.3.0
+numpy==2.2.6
+pyarrow==25.0.1
+pandas==2.3.3
+av==15.1.0
+opencv-python-headless==4.13.0.92
+h5py==3.16.0
+scipy==1.18.1
+tqdm==4.70.0
+Pillow==12.3.0
+safetensors==0.8.0

@@ -168,7 +168,7 @@ class FutureFeatureDecoder(nn.Module):
         return out
 
 
-def future_feature_cosine_loss(pred, target):
+def future_feature_cosine_loss(pred, target, sample_mask=None):
     """
     Per-token cosine loss = mean(1 - cos_sim).
     pred / target: (B, M, D). Computed in float32 for numerical stability
@@ -180,7 +180,11 @@ def future_feature_cosine_loss(pred, target):
     pred = F.normalize(pred.float(), dim=-1)
     target = F.normalize(target.float(), dim=-1)
     cos = (pred * target).sum(dim=-1)        # (B, M)
-    return (1.0 - cos).mean()
+    per_sample = (1.0 - cos).mean(dim=1)
+    if sample_mask is None:
+        return per_sample.mean()
+    valid = sample_mask.to(device=pred.device, dtype=per_sample.dtype)
+    return (per_sample * valid).sum() / valid.sum().clamp_min(1)
 
 
 class DiTBlock(nn.Module):
@@ -266,6 +270,7 @@ class VLAModel(nn.Module):
                  future_feat_out_dim=None,            # = DINO hidden_size; None -> = dino_feat_dims[0]
                  future_feat_depth=2,
                  future_feat_heads=4,
+                 num_cameras=1,
                  ):
         super().__init__()
         self.hidden_dim = hidden_dim
@@ -280,6 +285,10 @@ class VLAModel(nn.Module):
         assert fusion_mode in ("per_layer", "concat"), f"Unknown fusion_mode: {fusion_mode}"
 
         self.use_future_feat = use_future_feat
+        self.num_cameras = num_cameras
+        if num_cameras > 1:
+            self.camera_embeddings = nn.Parameter(torch.empty(1, num_cameras, 1, hidden_dim))
+            nn.init.normal_(self.camera_embeddings, std=0.02)
 
         # --- 1. Time Embedding ---
         self.time_mlp = nn.Sequential(
@@ -424,12 +433,12 @@ class VLAModel(nn.Module):
             assert len(dino_features_list) == self.num_dino_layers, \
                 f"Expected {self.num_dino_layers} DINO feature layers, got {len(dino_features_list)}"
             if self.fusion_mode == "concat":
-                fused = self.concat_fusion(dino_features_list)       # (B, N, fusion_out_dim)
-                cond = self.dino_adapters[0](fused)                  # (B, Q, hidden_dim)
+                fused = self.concat_fusion(dino_features_list)
+                cond = self._adapt_views(self.dino_adapters[0], fused)
                 tokens_list.append(cond + self.type_emb_dino_layers[0])
             else:
                 for layer_idx, feats in enumerate(dino_features_list):
-                    cond = self.dino_adapters[layer_idx](feats)
+                    cond = self._adapt_views(self.dino_adapters[layer_idx], feats)
                     tokens_list.append(cond + self.type_emb_dino_layers[layer_idx])
 
         # 4. Concat all tokens
@@ -459,6 +468,21 @@ class VLAModel(nn.Module):
             "cond_tokens": cond_tokens,
         }
 
+    def _adapt_views(self, adapter, features):
+        """Use shared adapter weights per view, then concatenate identified views."""
+        if features.ndim == 3:
+            if self.num_cameras != 1:
+                raise ValueError('Multi-camera model requires features shaped (B, V, N, D)')
+            return adapter(features)
+        batch, cameras, tokens, dim = features.shape
+        if cameras != self.num_cameras:
+            raise ValueError(f'Expected {self.num_cameras} cameras, got {cameras}')
+        output = adapter(features.reshape(batch * cameras, tokens, dim))
+        output = output.reshape(batch, cameras, output.shape[1], self.hidden_dim)
+        if cameras > 1:
+            output = output + self.camera_embeddings
+        return output.flatten(1, 2)
+
 
 def calc_flow_matching_loss(
     model,
@@ -476,6 +500,8 @@ def calc_flow_matching_loss(
     future_feat_target=None,
     use_future_feat=False,
     lambda_future_feat=0.5,
+    action_mask=None,
+    future_mask=None,
 ):
     """
     Flow Matching Loss (with optional Task Condition + Future-Feature Prediction)
@@ -523,8 +549,13 @@ def calc_flow_matching_loss(
         mean_vel = torch.zeros(bs, device=device)
 
     # ==================== Final Loss ====================
-    loss_final_unreduced = F.mse_loss(pred_v_final, target_v, reduction='none')
-    loss_final_per_sample = torch.mean(loss_final_unreduced, dim=(1, 2))
+    loss_final_unreduced = F.mse_loss(pred_v_final.float(), target_v.float(), reduction='none')
+    if action_mask is None:
+        loss_final_per_sample = torch.mean(loss_final_unreduced, dim=(1, 2))
+    else:
+        valid = action_mask.to(device=device, dtype=loss_final_unreduced.dtype).unsqueeze(-1)
+        denominator = valid.sum(dim=(1, 2)).clamp_min(1) * x1.shape[-1]
+        loss_final_per_sample = (loss_final_unreduced * valid).sum(dim=(1, 2)) / denominator
     loss_mse = torch.mean(loss_final_per_sample * weights)
 
     # ==================== Future Feature Prediction Loss ====================
@@ -535,7 +566,7 @@ def calc_flow_matching_loss(
         # shapes the representation); the target comes from the frozen DINO and
         # naturally carries no gradient
         pred_future = model.future_feat_decoder(cond_tokens)        # (B, M, D_dino)
-        loss_future_feat = future_feature_cosine_loss(pred_future, future_feat_target)
+        loss_future_feat = future_feature_cosine_loss(pred_future, future_feat_target, future_mask)
 
     # ==================== Total Loss ====================
     loss = loss_mse + lambda_future_feat * loss_future_feat

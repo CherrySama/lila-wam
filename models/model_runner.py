@@ -88,11 +88,14 @@ class ModelFactory:
         # Future-frame patch token count (number of queries for dense prediction); image_size=(W,H)
         img_w, img_h = tuple(config.dataset.image_size)
         num_patches = (img_h // patch_size) * (img_w // patch_size)
+        multi_view_data = config.dataset.get('type') in ('lerobot', 'robotwin_panthera')
+        num_cameras = len(config.dataset.camera_names) if multi_view_data else 1
         logger.info(f"Fusion mode: {fusion_mode} "
                     f"(concat_out_dim={concat_out_dim}, proj={concat_proj_type}, pre_norm={concat_pre_norm})")
         if use_future_feat:
             logger.info(f"Future-Feat Prediction ENABLED: "
-                        f"num_queries(num_patches)={num_patches}, out_dim={dino_hidden_size}")
+                        f"patches_per_camera={num_patches}, cameras={num_cameras}, "
+                        f"num_queries={num_patches * num_cameras}, out_dim={dino_hidden_size}")
 
         model = VLAModel(
             action_dim=config.common.action_dim,
@@ -113,10 +116,11 @@ class ModelFactory:
             concat_pre_norm=concat_pre_norm,
             concat_out_dim=concat_out_dim,
             use_future_feat=use_future_feat,
-            future_feat_num_queries=num_patches,
+            future_feat_num_queries=num_patches * num_cameras,
             future_feat_out_dim=dino_hidden_size,
             future_feat_depth=future_feat_depth,
             future_feat_heads=future_feat_heads,
+            num_cameras=num_cameras,
         )
         return model
 
@@ -140,6 +144,7 @@ class VLAWrapper(nn.Module):
                  norm_stats_path,
                  train_config=None,
                  future_feat_target_layer=-1,
+                 norm_stats_key='robotwin2',
                  ):
         super().__init__()
         self.vision_encoder = vision_encoder
@@ -149,6 +154,7 @@ class VLAWrapper(nn.Module):
         self.include_cls_register = include_cls_register
         self.num_register_tokens = num_register_tokens
         self.future_feat_target_layer = future_feat_target_layer
+        self.norm_stats_key = norm_stats_key
 
         self.device = device
         self.dtype = dtype
@@ -185,7 +191,7 @@ class VLAWrapper(nn.Module):
         with open(path, 'r') as f:
             data = json.load(f)
 
-        stats = data['robotwin2']
+        stats = data[self.norm_stats_key]
         action_stats = stats['action']
         state_stats = stats['state']
 
@@ -201,6 +207,12 @@ class VLAWrapper(nn.Module):
         self.register_buffer('state_max', state_max)
         logger.info(f"Loaded State stats - Dim: {len(state_stats['min'])}")
 
+    def train(self, mode=True):
+        super().train(mode)
+        # The frozen encoder must remain deterministic even while the head trains.
+        self.vision_encoder.eval()
+        return self
+
     @torch.no_grad()
     def get_vision_features(self, pixel_values):
         """
@@ -215,6 +227,10 @@ class VLAWrapper(nn.Module):
             otherwise N = num_patches (the first 1 + num_register_tokens tokens are dropped)
         """
         pixel_values = pixel_values.to(self.device, self.dtype)
+        multi_view = pixel_values.ndim == 5
+        if multi_view:
+            batch, cameras = pixel_values.shape[:2]
+            pixel_values = pixel_values.flatten(0, 1)
         outputs = self.vision_encoder(
             pixel_values=pixel_values,
             output_hidden_states=True,
@@ -231,6 +247,8 @@ class VLAWrapper(nn.Module):
             if not self.include_cls_register:
                 skip = 1 + self.num_register_tokens
                 h = h[:, skip:, :]
+            if multi_view:
+                h = h.reshape(batch, cameras, h.shape[1], h.shape[2])
             feats_list.append(h)
         return feats_list
 
@@ -248,6 +266,10 @@ class VLAWrapper(nn.Module):
             taken from layer future_feat_target_layer
         """
         future_pixel_values = future_pixel_values.to(self.device, self.dtype)
+        multi_view = future_pixel_values.ndim == 5
+        if multi_view:
+            batch, cameras = future_pixel_values.shape[:2]
+            future_pixel_values = future_pixel_values.flatten(0, 1)
         outputs = self.vision_encoder(
             pixel_values=future_pixel_values,
             output_hidden_states=True,
@@ -256,6 +278,8 @@ class VLAWrapper(nn.Module):
         h = outputs.hidden_states[self.future_feat_target_layer]   # (B, 1+R+P, D)
         skip = 1 + self.num_register_tokens
         h = h[:, skip:, :]                                          # (B, P, D) patch tokens only
+        if multi_view:
+            h = h.reshape(batch, cameras * h.shape[1], h.shape[2])
         return h
 
     def _normalize_tensor(self, x, min_val, max_val):
@@ -291,8 +315,8 @@ class VLAWrapper(nn.Module):
         dino_features_list = self.get_vision_features(pixel_values)
 
         # 2. Action / State preparation
-        x1_raw = batch['action_sequence'].to(self.device, self.dtype)
-        qpos_raw = batch['state'].to(self.device, self.dtype)
+        x1_raw = batch['action_sequence'].to(self.device, torch.float32)
+        qpos_raw = batch['state'].to(self.device, torch.float32)
 
         if qpos_raw.dim() == 2:
             qpos_raw = qpos_raw.unsqueeze(1)
@@ -329,6 +353,8 @@ class VLAWrapper(nn.Module):
             future_feat_target=future_feat_target,
             use_future_feat=self.use_future_feat,
             lambda_future_feat=self.lambda_future_feat,
+            action_mask=batch.get('action_mask'),
+            future_mask=batch.get('future_mask'),
         )
 
         return loss, info_dic

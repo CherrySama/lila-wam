@@ -1,0 +1,1307 @@
+{
+  "feature_names": {
+    "action": [
+      "joint1.pos",
+      "joint2.pos",
+      "joint3.pos",
+      "joint4.pos",
+      "joint5.pos",
+      "joint6.pos",
+      "gripper.pos"
+    ],
+    "observation.state": [
+      "joint1.pos",
+      "joint2.pos",
+      "joint3.pos",
+      "joint4.pos",
+      "joint5.pos",
+      "joint6.pos",
+      "gripper.pos"
+    ]
+  },
+  "split": {
+    "seed": 42,
+    "train": [
+      {
+        "dataset": "data/robotwin/move_pillbottle_pad/move_pillbottle_pad_panthera_single_dr",
+        "episode_index": 1
+      },
+      {
+        "dataset": "data/robotwin/move_pillbottle_pad/move_pillbottle_pad_panthera_single_dr",
+        "episode_index": 2
+      },
+      {
+        "dataset": "data/robotwin/move_pillbottle_pad/move_pillbottle_pad_panthera_single_dr",
+        "episode_index": 3
+      },
+      {
+        "dataset": "data/robotwin/move_pillbottle_pad/move_pillbottle_pad_panthera_single_dr",
+        "episode_index": 4
+      },
+      {
+        "dataset": "data/robotwin/move_pillbottle_pad/move_pillbottle_pad_panthera_single_dr",
+        "episode_index": 5
+      },
+      {
+        "dataset": "data/robotwin/move_pillbottle_pad/move_pillbottle_pad_panthera_single_dr",
+        "episode_index": 6
+      },
+      {
+        "dataset": "data/robotwin/move_pillbottle_pad/move_pillbottle_pad_panthera_single_dr",
+        "episode_index": 7
+      },
+      {
+        "dataset": "data/robotwin/move_pillbottle_pad/move_pillbottle_pad_panthera_single_dr",
+        "episode_index": 8
+      },
+      {
+        "dataset": "data/robotwin/move_pillbottle_pad/move_pillbottle_pad_panthera_single_dr",
+        "episode_index": 9
+      },
+      {
+        "dataset": "data/robotwin/move_pillbottle_pad/move_pillbottle_pad_panthera_single_dr",
+        "episode_index": 10
+      },
+      {
+        "dataset": "data/robotwin/move_pillbottle_pad/move_pillbottle_pad_panthera_single_dr",
+        "episode_index": 11
+      },
+      {
+        "dataset": "data/robotwin/move_pillbottle_pad/move_pillbottle_pad_panthera_single_dr",
+        "episode_index": 12
+      },
+      {
+        "dataset": "data/robotwin/move_pillbottle_pad/move_pillbottle_pad_panthera_single_dr",
+        "episode_index": 13
+      },
+      {
+        "dataset": "data/robotwin/move_pillbottle_pad/move_pillbottle_pad_panthera_single_dr",
+        "episode_index": 14
+      },
+      {
+        "dataset": "data/robotwin/move_pillbottle_pad/move_pillbottle_pad_panthera_single_dr",
+        "episode_index": 15
+      },
+      {
+        "dataset": "data/robotwin/move_pillbottle_pad/move_pillbottle_pad_panthera_single_dr",
+        "episode_index": 16
+      },
+      {
+        "dataset": "data/robotwin/move_pillbottle_pad/move_pillbottle_pad_panthera_single_dr",
+        "episode_index": 17
+      },
+      {
+        "dataset": "data/robotwin/move_pillbottle_pad/move_pillbottle_pad_panthera_single_dr",
+        "episode_index": 18
+      },
+      {
+        "dataset": "data/robotwin/move_pillbottle_pad/move_pillbottle_pad_panthera_single_dr",
+        "episode_index": 20
+      },
+      {
+        "dataset": "data/robotwin/move_pillbottle_pad/move_pillbottle_pad_panthera_single_dr",
+        "episode_index": 21
+      },
+      {
+        "dataset": "data/robotwin/move_pillbottle_pad/move_pillbottle_pad_panthera_single_dr",
+        "episode_index": 22
+      },
+      {
+        "dataset": "data/robotwin/move_pillbottle_pad/move_pillbottle_pad_panthera_single_dr",
+        "episode_index": 23
+      },
+      {
+        "dataset": "data/robotwin/move_pillbottle_pad/move_pillbottle_pad_panthera_single_dr",
+        "episode_index": 24
+      },
+      {
+        "dataset": "data/robotwin/move_pillbottle_pad/move_pillbottle_pad_panthera_single_dr",
+        "episode_index": 25
+      },
+      {
+        "dataset": "data/robotwin/move_pillbottle_pad/move_pillbottle_pad_panthera_single_dr",
+        "episode_index": 27
+      },
+      {
+        "dataset": "data/robotwin/move_pillbottle_pad/move_pillbottle_pad_panthera_single_dr",
+        "episode_index": 28
+      },
+      {
+        "dataset": "data/robotwin/move_pillbottle_pad/move_pillbottle_pad_panthera_single_dr",
+        "episode_index": 29
+      },
+      {
+        "dataset": "data/robotwin/move_pillbottle_pad/move_pillbottle_pad_panthera_single_dr",
+        "episode_index": 30
+      },
+      {
+        "dataset": "data/robotwin/move_pillbottle_pad/move_pillbottle_pad_panthera_single_dr",
+        "episode_index": 31
+      },
+      {
+        "dataset": "data/robotwin/move_pillbottle_pad/move_pillbottle_pad_panthera_single_dr",
+        "episode_index": 32
+      },
+      {
+        "dataset": "data/robotwin/move_pillbottle_pad/move_pillbottle_pad_panthera_single_dr",
+        "episode_index": 33
+      },
+      {
+        "dataset": "data/robotwin/move_pillbottle_pad/move_pillbottle_pad_panthera_single_dr",
+        "episode_index": 34
+      },
+      {
+        "dataset": "data/robotwin/move_pillbottle_pad/move_pillbottle_pad_panthera_single_dr",
+        "episode_index": 35
+      },
+      {
+        "dataset": "data/robotwin/move_pillbottle_pad/move_pillbottle_pad_panthera_single_dr",
+        "episode_index": 36
+      },
+      {
+        "dataset": "data/robotwin/move_pillbottle_pad/move_pillbottle_pad_panthera_single_dr",
+        "episode_index": 37
+      },
+      {
+        "dataset": "data/robotwin/move_pillbottle_pad/move_pillbottle_pad_panthera_single_dr",
+        "episode_index": 38
+      },
+      {
+        "dataset": "data/robotwin/move_pillbottle_pad/move_pillbottle_pad_panthera_single_dr",
+        "episode_index": 39
+      },
+      {
+        "dataset": "data/robotwin/move_pillbottle_pad/move_pillbottle_pad_panthera_single_dr",
+        "episode_index": 40
+      },
+      {
+        "dataset": "data/robotwin/move_pillbottle_pad/move_pillbottle_pad_panthera_single_dr",
+        "episode_index": 41
+      },
+      {
+        "dataset": "data/robotwin/move_pillbottle_pad/move_pillbottle_pad_panthera_single_dr",
+        "episode_index": 42
+      },
+      {
+        "dataset": "data/robotwin/move_pillbottle_pad/move_pillbottle_pad_panthera_single_dr",
+        "episode_index": 43
+      },
+      {
+        "dataset": "data/robotwin/move_pillbottle_pad/move_pillbottle_pad_panthera_single_dr",
+        "episode_index": 44
+      },
+      {
+        "dataset": "data/robotwin/move_pillbottle_pad/move_pillbottle_pad_panthera_single_dr",
+        "episode_index": 45
+      },
+      {
+        "dataset": "data/robotwin/move_pillbottle_pad/move_pillbottle_pad_panthera_single_dr",
+        "episode_index": 47
+      },
+      {
+        "dataset": "data/robotwin/move_pillbottle_pad/move_pillbottle_pad_panthera_single_dr",
+        "episode_index": 48
+      },
+      {
+        "dataset": "data/robotwin/move_pillbottle_pad/move_pillbottle_pad_panthera_single_dr",
+        "episode_index": 49
+      },
+      {
+        "dataset": "data/robotwin/move_pillbottle_pad/move_pillbottle_pad_panthera_single_dr",
+        "episode_index": 50
+      },
+      {
+        "dataset": "data/robotwin/move_pillbottle_pad/move_pillbottle_pad_panthera_single_dr",
+        "episode_index": 52
+      },
+      {
+        "dataset": "data/robotwin/move_pillbottle_pad/move_pillbottle_pad_panthera_single_dr",
+        "episode_index": 53
+      },
+      {
+        "dataset": "data/robotwin/move_pillbottle_pad/move_pillbottle_pad_panthera_single_dr",
+        "episode_index": 54
+      },
+      {
+        "dataset": "data/robotwin/move_pillbottle_pad/move_pillbottle_pad_panthera_single_dr",
+        "episode_index": 55
+      },
+      {
+        "dataset": "data/robotwin/move_pillbottle_pad/move_pillbottle_pad_panthera_single_dr",
+        "episode_index": 56
+      },
+      {
+        "dataset": "data/robotwin/move_pillbottle_pad/move_pillbottle_pad_panthera_single_dr",
+        "episode_index": 57
+      },
+      {
+        "dataset": "data/robotwin/move_pillbottle_pad/move_pillbottle_pad_panthera_single_dr",
+        "episode_index": 58
+      },
+      {
+        "dataset": "data/robotwin/move_pillbottle_pad/move_pillbottle_pad_panthera_single_dr",
+        "episode_index": 59
+      },
+      {
+        "dataset": "data/robotwin/move_pillbottle_pad/move_pillbottle_pad_panthera_single_dr",
+        "episode_index": 60
+      },
+      {
+        "dataset": "data/robotwin/move_pillbottle_pad/move_pillbottle_pad_panthera_single_dr",
+        "episode_index": 62
+      },
+      {
+        "dataset": "data/robotwin/move_pillbottle_pad/move_pillbottle_pad_panthera_single_dr",
+        "episode_index": 63
+      },
+      {
+        "dataset": "data/robotwin/move_pillbottle_pad/move_pillbottle_pad_panthera_single_dr",
+        "episode_index": 65
+      },
+      {
+        "dataset": "data/robotwin/move_pillbottle_pad/move_pillbottle_pad_panthera_single_dr",
+        "episode_index": 66
+      },
+      {
+        "dataset": "data/robotwin/move_pillbottle_pad/move_pillbottle_pad_panthera_single_dr",
+        "episode_index": 67
+      },
+      {
+        "dataset": "data/robotwin/move_pillbottle_pad/move_pillbottle_pad_panthera_single_dr",
+        "episode_index": 68
+      },
+      {
+        "dataset": "data/robotwin/move_pillbottle_pad/move_pillbottle_pad_panthera_single_dr",
+        "episode_index": 69
+      },
+      {
+        "dataset": "data/robotwin/move_pillbottle_pad/move_pillbottle_pad_panthera_single_dr",
+        "episode_index": 70
+      },
+      {
+        "dataset": "data/robotwin/move_pillbottle_pad/move_pillbottle_pad_panthera_single_dr",
+        "episode_index": 71
+      },
+      {
+        "dataset": "data/robotwin/move_pillbottle_pad/move_pillbottle_pad_panthera_single_dr",
+        "episode_index": 72
+      },
+      {
+        "dataset": "data/robotwin/move_pillbottle_pad/move_pillbottle_pad_panthera_single_dr",
+        "episode_index": 73
+      },
+      {
+        "dataset": "data/robotwin/move_pillbottle_pad/move_pillbottle_pad_panthera_single_dr",
+        "episode_index": 74
+      },
+      {
+        "dataset": "data/robotwin/move_pillbottle_pad/move_pillbottle_pad_panthera_single_dr",
+        "episode_index": 75
+      },
+      {
+        "dataset": "data/robotwin/move_pillbottle_pad/move_pillbottle_pad_panthera_single_dr",
+        "episode_index": 76
+      },
+      {
+        "dataset": "data/robotwin/move_pillbottle_pad/move_pillbottle_pad_panthera_single_dr",
+        "episode_index": 78
+      },
+      {
+        "dataset": "data/robotwin/move_pillbottle_pad/move_pillbottle_pad_panthera_single_dr",
+        "episode_index": 79
+      },
+      {
+        "dataset": "data/robotwin/move_pillbottle_pad/move_pillbottle_pad_panthera_single_dr",
+        "episode_index": 80
+      },
+      {
+        "dataset": "data/robotwin/move_pillbottle_pad/move_pillbottle_pad_panthera_single_dr",
+        "episode_index": 81
+      },
+      {
+        "dataset": "data/robotwin/move_pillbottle_pad/move_pillbottle_pad_panthera_single_dr",
+        "episode_index": 82
+      },
+      {
+        "dataset": "data/robotwin/move_pillbottle_pad/move_pillbottle_pad_panthera_single_dr",
+        "episode_index": 83
+      },
+      {
+        "dataset": "data/robotwin/move_pillbottle_pad/move_pillbottle_pad_panthera_single_dr",
+        "episode_index": 84
+      },
+      {
+        "dataset": "data/robotwin/move_pillbottle_pad/move_pillbottle_pad_panthera_single_dr",
+        "episode_index": 85
+      },
+      {
+        "dataset": "data/robotwin/move_pillbottle_pad/move_pillbottle_pad_panthera_single_dr",
+        "episode_index": 86
+      },
+      {
+        "dataset": "data/robotwin/move_pillbottle_pad/move_pillbottle_pad_panthera_single_dr",
+        "episode_index": 87
+      },
+      {
+        "dataset": "data/robotwin/move_pillbottle_pad/move_pillbottle_pad_panthera_single_dr",
+        "episode_index": 88
+      },
+      {
+        "dataset": "data/robotwin/move_pillbottle_pad/move_pillbottle_pad_panthera_single_dr",
+        "episode_index": 89
+      },
+      {
+        "dataset": "data/robotwin/move_pillbottle_pad/move_pillbottle_pad_panthera_single_dr",
+        "episode_index": 90
+      },
+      {
+        "dataset": "data/robotwin/move_pillbottle_pad/move_pillbottle_pad_panthera_single_dr",
+        "episode_index": 91
+      },
+      {
+        "dataset": "data/robotwin/move_pillbottle_pad/move_pillbottle_pad_panthera_single_dr",
+        "episode_index": 93
+      },
+      {
+        "dataset": "data/robotwin/move_pillbottle_pad/move_pillbottle_pad_panthera_single_dr",
+        "episode_index": 94
+      },
+      {
+        "dataset": "data/robotwin/move_pillbottle_pad/move_pillbottle_pad_panthera_single_dr",
+        "episode_index": 95
+      },
+      {
+        "dataset": "data/robotwin/move_pillbottle_pad/move_pillbottle_pad_panthera_single_dr",
+        "episode_index": 96
+      },
+      {
+        "dataset": "data/robotwin/move_pillbottle_pad/move_pillbottle_pad_panthera_single_dr",
+        "episode_index": 97
+      },
+      {
+        "dataset": "data/robotwin/move_pillbottle_pad/move_pillbottle_pad_panthera_single_dr",
+        "episode_index": 99
+      },
+      {
+        "dataset": "data/robotwin/move_pillbottle_pad/move_pillbottle_pad_panthera_single_dr",
+        "episode_index": 100
+      },
+      {
+        "dataset": "data/robotwin/move_pillbottle_pad/move_pillbottle_pad_panthera_single_dr",
+        "episode_index": 101
+      },
+      {
+        "dataset": "data/robotwin/move_pillbottle_pad/move_pillbottle_pad_panthera_single_dr",
+        "episode_index": 102
+      },
+      {
+        "dataset": "data/robotwin/move_pillbottle_pad/move_pillbottle_pad_panthera_single_dr",
+        "episode_index": 103
+      },
+      {
+        "dataset": "data/robotwin/move_pillbottle_pad/move_pillbottle_pad_panthera_single_dr",
+        "episode_index": 104
+      },
+      {
+        "dataset": "data/robotwin/move_pillbottle_pad/move_pillbottle_pad_panthera_single_dr",
+        "episode_index": 105
+      },
+      {
+        "dataset": "data/robotwin/move_pillbottle_pad/move_pillbottle_pad_panthera_single_dr",
+        "episode_index": 106
+      },
+      {
+        "dataset": "data/robotwin/move_pillbottle_pad/move_pillbottle_pad_panthera_single_dr",
+        "episode_index": 107
+      },
+      {
+        "dataset": "data/robotwin/move_pillbottle_pad/move_pillbottle_pad_panthera_single_dr",
+        "episode_index": 108
+      },
+      {
+        "dataset": "data/robotwin/move_pillbottle_pad/move_pillbottle_pad_panthera_single_dr",
+        "episode_index": 109
+      },
+      {
+        "dataset": "data/robotwin/move_pillbottle_pad/move_pillbottle_pad_panthera_single_dr",
+        "episode_index": 110
+      },
+      {
+        "dataset": "data/robotwin/move_pillbottle_pad/move_pillbottle_pad_panthera_single_dr",
+        "episode_index": 111
+      },
+      {
+        "dataset": "data/robotwin/move_pillbottle_pad/move_pillbottle_pad_panthera_single_dr",
+        "episode_index": 112
+      },
+      {
+        "dataset": "data/robotwin/move_pillbottle_pad/move_pillbottle_pad_panthera_single_dr",
+        "episode_index": 113
+      },
+      {
+        "dataset": "data/robotwin/move_pillbottle_pad/move_pillbottle_pad_panthera_single_dr",
+        "episode_index": 114
+      },
+      {
+        "dataset": "data/robotwin/move_pillbottle_pad/move_pillbottle_pad_panthera_single_dr",
+        "episode_index": 115
+      },
+      {
+        "dataset": "data/robotwin/move_pillbottle_pad/move_pillbottle_pad_panthera_single_dr",
+        "episode_index": 116
+      },
+      {
+        "dataset": "data/robotwin/move_pillbottle_pad/move_pillbottle_pad_panthera_single_dr",
+        "episode_index": 117
+      },
+      {
+        "dataset": "data/robotwin/move_pillbottle_pad/move_pillbottle_pad_panthera_single_dr",
+        "episode_index": 118
+      },
+      {
+        "dataset": "data/robotwin/move_pillbottle_pad/move_pillbottle_pad_panthera_single_dr",
+        "episode_index": 119
+      },
+      {
+        "dataset": "data/robotwin/move_pillbottle_pad/move_pillbottle_pad_panthera_single_dr",
+        "episode_index": 120
+      },
+      {
+        "dataset": "data/robotwin/move_pillbottle_pad/move_pillbottle_pad_panthera_single_dr",
+        "episode_index": 121
+      },
+      {
+        "dataset": "data/robotwin/move_pillbottle_pad/move_pillbottle_pad_panthera_single_dr",
+        "episode_index": 122
+      },
+      {
+        "dataset": "data/robotwin/move_pillbottle_pad/move_pillbottle_pad_panthera_single_dr",
+        "episode_index": 123
+      },
+      {
+        "dataset": "data/robotwin/move_pillbottle_pad/move_pillbottle_pad_panthera_single_dr",
+        "episode_index": 124
+      },
+      {
+        "dataset": "data/robotwin/move_pillbottle_pad/move_pillbottle_pad_panthera_single_dr",
+        "episode_index": 125
+      },
+      {
+        "dataset": "data/robotwin/move_pillbottle_pad/move_pillbottle_pad_panthera_single_dr",
+        "episode_index": 126
+      },
+      {
+        "dataset": "data/robotwin/move_pillbottle_pad/move_pillbottle_pad_panthera_single_dr",
+        "episode_index": 128
+      },
+      {
+        "dataset": "data/robotwin/move_pillbottle_pad/move_pillbottle_pad_panthera_single_dr",
+        "episode_index": 129
+      },
+      {
+        "dataset": "data/robotwin/move_pillbottle_pad/move_pillbottle_pad_panthera_single_dr",
+        "episode_index": 130
+      },
+      {
+        "dataset": "data/robotwin/move_pillbottle_pad/move_pillbottle_pad_panthera_single_dr",
+        "episode_index": 131
+      },
+      {
+        "dataset": "data/robotwin/move_pillbottle_pad/move_pillbottle_pad_panthera_single_dr",
+        "episode_index": 132
+      },
+      {
+        "dataset": "data/robotwin/move_pillbottle_pad/move_pillbottle_pad_panthera_single_dr",
+        "episode_index": 133
+      },
+      {
+        "dataset": "data/robotwin/move_pillbottle_pad/move_pillbottle_pad_panthera_single_dr",
+        "episode_index": 134
+      },
+      {
+        "dataset": "data/robotwin/move_pillbottle_pad/move_pillbottle_pad_panthera_single_dr",
+        "episode_index": 135
+      },
+      {
+        "dataset": "data/robotwin/move_pillbottle_pad/move_pillbottle_pad_panthera_single_dr",
+        "episode_index": 136
+      },
+      {
+        "dataset": "data/robotwin/move_pillbottle_pad/move_pillbottle_pad_panthera_single_dr",
+        "episode_index": 137
+      },
+      {
+        "dataset": "data/robotwin/move_pillbottle_pad/move_pillbottle_pad_panthera_single_dr",
+        "episode_index": 138
+      },
+      {
+        "dataset": "data/robotwin/move_pillbottle_pad/move_pillbottle_pad_panthera_single_dr",
+        "episode_index": 139
+      },
+      {
+        "dataset": "data/robotwin/move_pillbottle_pad/move_pillbottle_pad_panthera_single_dr",
+        "episode_index": 140
+      },
+      {
+        "dataset": "data/robotwin/move_pillbottle_pad/move_pillbottle_pad_panthera_single_dr",
+        "episode_index": 141
+      },
+      {
+        "dataset": "data/robotwin/move_pillbottle_pad/move_pillbottle_pad_panthera_single_dr",
+        "episode_index": 142
+      },
+      {
+        "dataset": "data/robotwin/move_pillbottle_pad/move_pillbottle_pad_panthera_single_dr",
+        "episode_index": 143
+      },
+      {
+        "dataset": "data/robotwin/move_pillbottle_pad/move_pillbottle_pad_panthera_single_dr",
+        "episode_index": 144
+      },
+      {
+        "dataset": "data/robotwin/move_pillbottle_pad/move_pillbottle_pad_panthera_single_dr",
+        "episode_index": 145
+      },
+      {
+        "dataset": "data/robotwin/move_pillbottle_pad/move_pillbottle_pad_panthera_single_dr",
+        "episode_index": 146
+      },
+      {
+        "dataset": "data/robotwin/move_pillbottle_pad/move_pillbottle_pad_panthera_single_dr",
+        "episode_index": 147
+      },
+      {
+        "dataset": "data/robotwin/move_pillbottle_pad/move_pillbottle_pad_panthera_single_dr",
+        "episode_index": 148
+      },
+      {
+        "dataset": "data/robotwin/move_pillbottle_pad/move_pillbottle_pad_panthera_single_dr",
+        "episode_index": 149
+      },
+      {
+        "dataset": "data/robotwin/move_pillbottle_pad/move_pillbottle_pad_panthera_single_dr",
+        "episode_index": 150
+      },
+      {
+        "dataset": "data/robotwin/move_pillbottle_pad/move_pillbottle_pad_panthera_single_dr",
+        "episode_index": 151
+      },
+      {
+        "dataset": "data/robotwin/move_pillbottle_pad/move_pillbottle_pad_panthera_single_dr",
+        "episode_index": 152
+      },
+      {
+        "dataset": "data/robotwin/move_pillbottle_pad/move_pillbottle_pad_panthera_single_dr",
+        "episode_index": 153
+      },
+      {
+        "dataset": "data/robotwin/move_pillbottle_pad/move_pillbottle_pad_panthera_single_dr",
+        "episode_index": 154
+      },
+      {
+        "dataset": "data/robotwin/move_pillbottle_pad/move_pillbottle_pad_panthera_single_dr",
+        "episode_index": 155
+      },
+      {
+        "dataset": "data/robotwin/move_pillbottle_pad/move_pillbottle_pad_panthera_single_dr",
+        "episode_index": 156
+      },
+      {
+        "dataset": "data/robotwin/move_pillbottle_pad/move_pillbottle_pad_panthera_single_dr",
+        "episode_index": 157
+      },
+      {
+        "dataset": "data/robotwin/move_pillbottle_pad/move_pillbottle_pad_panthera_single_dr",
+        "episode_index": 158
+      },
+      {
+        "dataset": "data/robotwin/move_pillbottle_pad/move_pillbottle_pad_panthera_single_dr",
+        "episode_index": 159
+      },
+      {
+        "dataset": "data/robotwin/move_pillbottle_pad/move_pillbottle_pad_panthera_single_dr",
+        "episode_index": 160
+      },
+      {
+        "dataset": "data/robotwin/move_pillbottle_pad/move_pillbottle_pad_panthera_single_dr",
+        "episode_index": 161
+      },
+      {
+        "dataset": "data/robotwin/move_pillbottle_pad/move_pillbottle_pad_panthera_single_dr",
+        "episode_index": 162
+      },
+      {
+        "dataset": "data/robotwin/move_pillbottle_pad/move_pillbottle_pad_panthera_single_dr",
+        "episode_index": 163
+      },
+      {
+        "dataset": "data/robotwin/move_pillbottle_pad/move_pillbottle_pad_panthera_single_dr",
+        "episode_index": 164
+      },
+      {
+        "dataset": "data/robotwin/move_pillbottle_pad/move_pillbottle_pad_panthera_single_dr",
+        "episode_index": 165
+      },
+      {
+        "dataset": "data/robotwin/move_pillbottle_pad/move_pillbottle_pad_panthera_single_dr",
+        "episode_index": 167
+      },
+      {
+        "dataset": "data/robotwin/move_pillbottle_pad/move_pillbottle_pad_panthera_single_dr",
+        "episode_index": 168
+      },
+      {
+        "dataset": "data/robotwin/move_pillbottle_pad/move_pillbottle_pad_panthera_single_dr",
+        "episode_index": 169
+      },
+      {
+        "dataset": "data/robotwin/move_pillbottle_pad/move_pillbottle_pad_panthera_single_dr",
+        "episode_index": 170
+      },
+      {
+        "dataset": "data/robotwin/move_pillbottle_pad/move_pillbottle_pad_panthera_single_dr",
+        "episode_index": 171
+      },
+      {
+        "dataset": "data/robotwin/move_pillbottle_pad/move_pillbottle_pad_panthera_single_dr",
+        "episode_index": 172
+      },
+      {
+        "dataset": "data/robotwin/move_pillbottle_pad/move_pillbottle_pad_panthera_single_dr",
+        "episode_index": 173
+      },
+      {
+        "dataset": "data/robotwin/move_pillbottle_pad/move_pillbottle_pad_panthera_single_dr",
+        "episode_index": 174
+      },
+      {
+        "dataset": "data/robotwin/move_pillbottle_pad/move_pillbottle_pad_panthera_single_dr",
+        "episode_index": 175
+      },
+      {
+        "dataset": "data/robotwin/move_pillbottle_pad/move_pillbottle_pad_panthera_single_dr",
+        "episode_index": 176
+      },
+      {
+        "dataset": "data/robotwin/move_pillbottle_pad/move_pillbottle_pad_panthera_single_dr",
+        "episode_index": 177
+      },
+      {
+        "dataset": "data/robotwin/move_pillbottle_pad/move_pillbottle_pad_panthera_single_dr",
+        "episode_index": 178
+      },
+      {
+        "dataset": "data/robotwin/move_pillbottle_pad/move_pillbottle_pad_panthera_single_dr",
+        "episode_index": 179
+      },
+      {
+        "dataset": "data/robotwin/move_pillbottle_pad/move_pillbottle_pad_panthera_single_dr",
+        "episode_index": 180
+      },
+      {
+        "dataset": "data/robotwin/move_pillbottle_pad/move_pillbottle_pad_panthera_single_dr",
+        "episode_index": 181
+      },
+      {
+        "dataset": "data/robotwin/move_pillbottle_pad/move_pillbottle_pad_panthera_single_dr",
+        "episode_index": 182
+      },
+      {
+        "dataset": "data/robotwin/move_pillbottle_pad/move_pillbottle_pad_panthera_single_dr",
+        "episode_index": 183
+      },
+      {
+        "dataset": "data/robotwin/move_pillbottle_pad/move_pillbottle_pad_panthera_single_dr",
+        "episode_index": 185
+      },
+      {
+        "dataset": "data/robotwin/move_pillbottle_pad/move_pillbottle_pad_panthera_single_dr",
+        "episode_index": 186
+      },
+      {
+        "dataset": "data/robotwin/move_pillbottle_pad/move_pillbottle_pad_panthera_single_dr",
+        "episode_index": 187
+      },
+      {
+        "dataset": "data/robotwin/move_pillbottle_pad/move_pillbottle_pad_panthera_single_dr",
+        "episode_index": 188
+      },
+      {
+        "dataset": "data/robotwin/move_pillbottle_pad/move_pillbottle_pad_panthera_single_dr",
+        "episode_index": 189
+      },
+      {
+        "dataset": "data/robotwin/move_pillbottle_pad/move_pillbottle_pad_panthera_single_dr",
+        "episode_index": 190
+      },
+      {
+        "dataset": "data/robotwin/move_pillbottle_pad/move_pillbottle_pad_panthera_single_dr",
+        "episode_index": 192
+      },
+      {
+        "dataset": "data/robotwin/move_pillbottle_pad/move_pillbottle_pad_panthera_single_dr",
+        "episode_index": 194
+      },
+      {
+        "dataset": "data/robotwin/move_pillbottle_pad/move_pillbottle_pad_panthera_single_dr",
+        "episode_index": 195
+      },
+      {
+        "dataset": "data/robotwin/move_pillbottle_pad/move_pillbottle_pad_panthera_single_dr",
+        "episode_index": 196
+      },
+      {
+        "dataset": "data/robotwin/move_pillbottle_pad/move_pillbottle_pad_panthera_single_dr",
+        "episode_index": 197
+      },
+      {
+        "dataset": "data/robotwin/move_pillbottle_pad/move_pillbottle_pad_panthera_single_dr",
+        "episode_index": 198
+      },
+      {
+        "dataset": "data/robotwin/move_pillbottle_pad/move_pillbottle_pad_panthera_single_dr",
+        "episode_index": 199
+      },
+      {
+        "dataset": "data/robotwin/move_pillbottle_pad/move_pillbottle_pad_panthera_single_dr",
+        "episode_index": 200
+      },
+      {
+        "dataset": "data/robotwin/move_pillbottle_pad/move_pillbottle_pad_panthera_single_dr",
+        "episode_index": 202
+      },
+      {
+        "dataset": "data/robotwin/move_pillbottle_pad/move_pillbottle_pad_panthera_single_dr",
+        "episode_index": 203
+      },
+      {
+        "dataset": "data/robotwin/move_pillbottle_pad/move_pillbottle_pad_panthera_single_dr",
+        "episode_index": 204
+      },
+      {
+        "dataset": "data/robotwin/move_pillbottle_pad/move_pillbottle_pad_panthera_single_dr",
+        "episode_index": 205
+      },
+      {
+        "dataset": "data/robotwin/move_pillbottle_pad/move_pillbottle_pad_panthera_single_dr",
+        "episode_index": 206
+      },
+      {
+        "dataset": "data/robotwin/move_pillbottle_pad/move_pillbottle_pad_panthera_single_dr",
+        "episode_index": 207
+      },
+      {
+        "dataset": "data/robotwin/move_pillbottle_pad/move_pillbottle_pad_panthera_single_dr",
+        "episode_index": 208
+      },
+      {
+        "dataset": "data/robotwin/move_pillbottle_pad/move_pillbottle_pad_panthera_single_dr",
+        "episode_index": 209
+      },
+      {
+        "dataset": "data/robotwin/move_pillbottle_pad/move_pillbottle_pad_panthera_single_dr",
+        "episode_index": 210
+      },
+      {
+        "dataset": "data/robotwin/move_pillbottle_pad/move_pillbottle_pad_panthera_single_dr",
+        "episode_index": 211
+      },
+      {
+        "dataset": "data/robotwin/move_pillbottle_pad/move_pillbottle_pad_panthera_single_dr",
+        "episode_index": 212
+      },
+      {
+        "dataset": "data/robotwin/move_pillbottle_pad/move_pillbottle_pad_panthera_single_dr",
+        "episode_index": 213
+      },
+      {
+        "dataset": "data/robotwin/move_pillbottle_pad/move_pillbottle_pad_panthera_single_dr",
+        "episode_index": 215
+      },
+      {
+        "dataset": "data/robotwin/move_pillbottle_pad/move_pillbottle_pad_panthera_single_dr",
+        "episode_index": 216
+      },
+      {
+        "dataset": "data/robotwin/move_pillbottle_pad/move_pillbottle_pad_panthera_single_dr",
+        "episode_index": 217
+      },
+      {
+        "dataset": "data/robotwin/move_pillbottle_pad/move_pillbottle_pad_panthera_single_dr",
+        "episode_index": 218
+      },
+      {
+        "dataset": "data/robotwin/move_pillbottle_pad/move_pillbottle_pad_panthera_single_dr",
+        "episode_index": 219
+      },
+      {
+        "dataset": "data/robotwin/move_pillbottle_pad/move_pillbottle_pad_panthera_single_dr",
+        "episode_index": 220
+      },
+      {
+        "dataset": "data/robotwin/move_pillbottle_pad/move_pillbottle_pad_panthera_single_dr",
+        "episode_index": 221
+      },
+      {
+        "dataset": "data/robotwin/move_pillbottle_pad/move_pillbottle_pad_panthera_single_dr",
+        "episode_index": 222
+      },
+      {
+        "dataset": "data/robotwin/move_pillbottle_pad/move_pillbottle_pad_panthera_single_dr",
+        "episode_index": 223
+      },
+      {
+        "dataset": "data/robotwin/move_pillbottle_pad/move_pillbottle_pad_panthera_single_dr",
+        "episode_index": 224
+      },
+      {
+        "dataset": "data/robotwin/move_pillbottle_pad/move_pillbottle_pad_panthera_single_dr",
+        "episode_index": 225
+      },
+      {
+        "dataset": "data/robotwin/move_pillbottle_pad/move_pillbottle_pad_panthera_single_dr",
+        "episode_index": 226
+      },
+      {
+        "dataset": "data/robotwin/move_pillbottle_pad/move_pillbottle_pad_panthera_single_dr",
+        "episode_index": 227
+      },
+      {
+        "dataset": "data/robotwin/move_pillbottle_pad/move_pillbottle_pad_panthera_single_dr",
+        "episode_index": 228
+      },
+      {
+        "dataset": "data/robotwin/move_pillbottle_pad/move_pillbottle_pad_panthera_single_dr",
+        "episode_index": 229
+      },
+      {
+        "dataset": "data/robotwin/move_pillbottle_pad/move_pillbottle_pad_panthera_single_dr",
+        "episode_index": 230
+      },
+      {
+        "dataset": "data/robotwin/move_pillbottle_pad/move_pillbottle_pad_panthera_single_dr",
+        "episode_index": 231
+      },
+      {
+        "dataset": "data/robotwin/move_pillbottle_pad/move_pillbottle_pad_panthera_single_dr",
+        "episode_index": 232
+      },
+      {
+        "dataset": "data/robotwin/move_pillbottle_pad/move_pillbottle_pad_panthera_single_dr",
+        "episode_index": 233
+      },
+      {
+        "dataset": "data/robotwin/move_pillbottle_pad/move_pillbottle_pad_panthera_single_dr",
+        "episode_index": 236
+      },
+      {
+        "dataset": "data/robotwin/move_pillbottle_pad/move_pillbottle_pad_panthera_single_dr",
+        "episode_index": 237
+      },
+      {
+        "dataset": "data/robotwin/move_pillbottle_pad/move_pillbottle_pad_panthera_single_dr",
+        "episode_index": 238
+      },
+      {
+        "dataset": "data/robotwin/move_pillbottle_pad/move_pillbottle_pad_panthera_single_dr",
+        "episode_index": 239
+      },
+      {
+        "dataset": "data/robotwin/move_pillbottle_pad/move_pillbottle_pad_panthera_single_dr",
+        "episode_index": 240
+      },
+      {
+        "dataset": "data/robotwin/move_pillbottle_pad/move_pillbottle_pad_panthera_single_dr",
+        "episode_index": 241
+      },
+      {
+        "dataset": "data/robotwin/move_pillbottle_pad/move_pillbottle_pad_panthera_single_dr",
+        "episode_index": 242
+      },
+      {
+        "dataset": "data/robotwin/move_pillbottle_pad/move_pillbottle_pad_panthera_single_dr",
+        "episode_index": 243
+      },
+      {
+        "dataset": "data/robotwin/move_pillbottle_pad/move_pillbottle_pad_panthera_single_dr",
+        "episode_index": 244
+      },
+      {
+        "dataset": "data/robotwin/move_pillbottle_pad/move_pillbottle_pad_panthera_single_dr",
+        "episode_index": 245
+      },
+      {
+        "dataset": "data/robotwin/move_pillbottle_pad/move_pillbottle_pad_panthera_single_dr",
+        "episode_index": 246
+      },
+      {
+        "dataset": "data/robotwin/move_pillbottle_pad/move_pillbottle_pad_panthera_single_dr",
+        "episode_index": 247
+      },
+      {
+        "dataset": "data/robotwin/move_pillbottle_pad/move_pillbottle_pad_panthera_single_dr",
+        "episode_index": 248
+      },
+      {
+        "dataset": "data/robotwin/move_pillbottle_pad/move_pillbottle_pad_panthera_single_dr",
+        "episode_index": 249
+      },
+      {
+        "dataset": "data/robotwin/move_pillbottle_pad/move_pillbottle_pad_panthera_single_dr",
+        "episode_index": 250
+      },
+      {
+        "dataset": "data/robotwin/move_pillbottle_pad/move_pillbottle_pad_panthera_single_dr",
+        "episode_index": 251
+      },
+      {
+        "dataset": "data/robotwin/move_pillbottle_pad/move_pillbottle_pad_panthera_single_dr",
+        "episode_index": 252
+      },
+      {
+        "dataset": "data/robotwin/move_pillbottle_pad/move_pillbottle_pad_panthera_single_dr",
+        "episode_index": 255
+      },
+      {
+        "dataset": "data/robotwin/move_pillbottle_pad/move_pillbottle_pad_panthera_single_dr",
+        "episode_index": 256
+      },
+      {
+        "dataset": "data/robotwin/move_pillbottle_pad/move_pillbottle_pad_panthera_single_dr",
+        "episode_index": 257
+      },
+      {
+        "dataset": "data/robotwin/move_pillbottle_pad/move_pillbottle_pad_panthera_single_dr",
+        "episode_index": 258
+      },
+      {
+        "dataset": "data/robotwin/move_pillbottle_pad/move_pillbottle_pad_panthera_single_dr",
+        "episode_index": 259
+      },
+      {
+        "dataset": "data/robotwin/move_pillbottle_pad/move_pillbottle_pad_panthera_single_dr",
+        "episode_index": 260
+      },
+      {
+        "dataset": "data/robotwin/move_pillbottle_pad/move_pillbottle_pad_panthera_single_dr",
+        "episode_index": 262
+      },
+      {
+        "dataset": "data/robotwin/move_pillbottle_pad/move_pillbottle_pad_panthera_single_dr",
+        "episode_index": 263
+      },
+      {
+        "dataset": "data/robotwin/move_pillbottle_pad/move_pillbottle_pad_panthera_single_dr",
+        "episode_index": 264
+      },
+      {
+        "dataset": "data/robotwin/move_pillbottle_pad/move_pillbottle_pad_panthera_single_dr",
+        "episode_index": 265
+      },
+      {
+        "dataset": "data/robotwin/move_pillbottle_pad/move_pillbottle_pad_panthera_single_dr",
+        "episode_index": 266
+      },
+      {
+        "dataset": "data/robotwin/move_pillbottle_pad/move_pillbottle_pad_panthera_single_dr",
+        "episode_index": 267
+      },
+      {
+        "dataset": "data/robotwin/move_pillbottle_pad/move_pillbottle_pad_panthera_single_dr",
+        "episode_index": 268
+      },
+      {
+        "dataset": "data/robotwin/move_pillbottle_pad/move_pillbottle_pad_panthera_single_dr",
+        "episode_index": 269
+      },
+      {
+        "dataset": "data/robotwin/move_pillbottle_pad/move_pillbottle_pad_panthera_single_dr",
+        "episode_index": 270
+      },
+      {
+        "dataset": "data/robotwin/move_pillbottle_pad/move_pillbottle_pad_panthera_single_dr",
+        "episode_index": 272
+      },
+      {
+        "dataset": "data/robotwin/move_pillbottle_pad/move_pillbottle_pad_panthera_single_dr",
+        "episode_index": 274
+      },
+      {
+        "dataset": "data/robotwin/move_pillbottle_pad/move_pillbottle_pad_panthera_single_dr",
+        "episode_index": 275
+      },
+      {
+        "dataset": "data/robotwin/move_pillbottle_pad/move_pillbottle_pad_panthera_single_dr",
+        "episode_index": 276
+      },
+      {
+        "dataset": "data/robotwin/move_pillbottle_pad/move_pillbottle_pad_panthera_single_dr",
+        "episode_index": 277
+      },
+      {
+        "dataset": "data/robotwin/move_pillbottle_pad/move_pillbottle_pad_panthera_single_dr",
+        "episode_index": 278
+      },
+      {
+        "dataset": "data/robotwin/move_pillbottle_pad/move_pillbottle_pad_panthera_single_dr",
+        "episode_index": 279
+      },
+      {
+        "dataset": "data/robotwin/move_pillbottle_pad/move_pillbottle_pad_panthera_single_dr",
+        "episode_index": 280
+      },
+      {
+        "dataset": "data/robotwin/move_pillbottle_pad/move_pillbottle_pad_panthera_single_dr",
+        "episode_index": 282
+      },
+      {
+        "dataset": "data/robotwin/move_pillbottle_pad/move_pillbottle_pad_panthera_single_dr",
+        "episode_index": 283
+      },
+      {
+        "dataset": "data/robotwin/move_pillbottle_pad/move_pillbottle_pad_panthera_single_dr",
+        "episode_index": 285
+      },
+      {
+        "dataset": "data/robotwin/move_pillbottle_pad/move_pillbottle_pad_panthera_single_dr",
+        "episode_index": 286
+      },
+      {
+        "dataset": "data/robotwin/move_pillbottle_pad/move_pillbottle_pad_panthera_single_dr",
+        "episode_index": 287
+      },
+      {
+        "dataset": "data/robotwin/move_pillbottle_pad/move_pillbottle_pad_panthera_single_dr",
+        "episode_index": 288
+      },
+      {
+        "dataset": "data/robotwin/move_pillbottle_pad/move_pillbottle_pad_panthera_single_dr",
+        "episode_index": 289
+      },
+      {
+        "dataset": "data/robotwin/move_pillbottle_pad/move_pillbottle_pad_panthera_single_dr",
+        "episode_index": 291
+      },
+      {
+        "dataset": "data/robotwin/move_pillbottle_pad/move_pillbottle_pad_panthera_single_dr",
+        "episode_index": 292
+      },
+      {
+        "dataset": "data/robotwin/move_pillbottle_pad/move_pillbottle_pad_panthera_single_dr",
+        "episode_index": 294
+      },
+      {
+        "dataset": "data/robotwin/move_pillbottle_pad/move_pillbottle_pad_panthera_single_dr",
+        "episode_index": 295
+      },
+      {
+        "dataset": "data/robotwin/move_pillbottle_pad/move_pillbottle_pad_panthera_single_dr",
+        "episode_index": 298
+      },
+      {
+        "dataset": "data/robotwin/move_pillbottle_pad/move_pillbottle_pad_panthera_single_dr",
+        "episode_index": 299
+      }
+    ],
+    "validation": [
+      {
+        "dataset": "data/robotwin/move_pillbottle_pad/move_pillbottle_pad_panthera_single_dr",
+        "episode_index": 0
+      },
+      {
+        "dataset": "data/robotwin/move_pillbottle_pad/move_pillbottle_pad_panthera_single_dr",
+        "episode_index": 19
+      },
+      {
+        "dataset": "data/robotwin/move_pillbottle_pad/move_pillbottle_pad_panthera_single_dr",
+        "episode_index": 26
+      },
+      {
+        "dataset": "data/robotwin/move_pillbottle_pad/move_pillbottle_pad_panthera_single_dr",
+        "episode_index": 46
+      },
+      {
+        "dataset": "data/robotwin/move_pillbottle_pad/move_pillbottle_pad_panthera_single_dr",
+        "episode_index": 51
+      },
+      {
+        "dataset": "data/robotwin/move_pillbottle_pad/move_pillbottle_pad_panthera_single_dr",
+        "episode_index": 61
+      },
+      {
+        "dataset": "data/robotwin/move_pillbottle_pad/move_pillbottle_pad_panthera_single_dr",
+        "episode_index": 64
+      },
+      {
+        "dataset": "data/robotwin/move_pillbottle_pad/move_pillbottle_pad_panthera_single_dr",
+        "episode_index": 77
+      },
+      {
+        "dataset": "data/robotwin/move_pillbottle_pad/move_pillbottle_pad_panthera_single_dr",
+        "episode_index": 92
+      },
+      {
+        "dataset": "data/robotwin/move_pillbottle_pad/move_pillbottle_pad_panthera_single_dr",
+        "episode_index": 98
+      },
+      {
+        "dataset": "data/robotwin/move_pillbottle_pad/move_pillbottle_pad_panthera_single_dr",
+        "episode_index": 127
+      },
+      {
+        "dataset": "data/robotwin/move_pillbottle_pad/move_pillbottle_pad_panthera_single_dr",
+        "episode_index": 166
+      },
+      {
+        "dataset": "data/robotwin/move_pillbottle_pad/move_pillbottle_pad_panthera_single_dr",
+        "episode_index": 184
+      },
+      {
+        "dataset": "data/robotwin/move_pillbottle_pad/move_pillbottle_pad_panthera_single_dr",
+        "episode_index": 191
+      },
+      {
+        "dataset": "data/robotwin/move_pillbottle_pad/move_pillbottle_pad_panthera_single_dr",
+        "episode_index": 193
+      },
+      {
+        "dataset": "data/robotwin/move_pillbottle_pad/move_pillbottle_pad_panthera_single_dr",
+        "episode_index": 201
+      },
+      {
+        "dataset": "data/robotwin/move_pillbottle_pad/move_pillbottle_pad_panthera_single_dr",
+        "episode_index": 214
+      },
+      {
+        "dataset": "data/robotwin/move_pillbottle_pad/move_pillbottle_pad_panthera_single_dr",
+        "episode_index": 234
+      },
+      {
+        "dataset": "data/robotwin/move_pillbottle_pad/move_pillbottle_pad_panthera_single_dr",
+        "episode_index": 235
+      },
+      {
+        "dataset": "data/robotwin/move_pillbottle_pad/move_pillbottle_pad_panthera_single_dr",
+        "episode_index": 253
+      },
+      {
+        "dataset": "data/robotwin/move_pillbottle_pad/move_pillbottle_pad_panthera_single_dr",
+        "episode_index": 254
+      },
+      {
+        "dataset": "data/robotwin/move_pillbottle_pad/move_pillbottle_pad_panthera_single_dr",
+        "episode_index": 261
+      },
+      {
+        "dataset": "data/robotwin/move_pillbottle_pad/move_pillbottle_pad_panthera_single_dr",
+        "episode_index": 271
+      },
+      {
+        "dataset": "data/robotwin/move_pillbottle_pad/move_pillbottle_pad_panthera_single_dr",
+        "episode_index": 273
+      },
+      {
+        "dataset": "data/robotwin/move_pillbottle_pad/move_pillbottle_pad_panthera_single_dr",
+        "episode_index": 281
+      },
+      {
+        "dataset": "data/robotwin/move_pillbottle_pad/move_pillbottle_pad_panthera_single_dr",
+        "episode_index": 284
+      },
+      {
+        "dataset": "data/robotwin/move_pillbottle_pad/move_pillbottle_pad_panthera_single_dr",
+        "episode_index": 290
+      },
+      {
+        "dataset": "data/robotwin/move_pillbottle_pad/move_pillbottle_pad_panthera_single_dr",
+        "episode_index": 293
+      },
+      {
+        "dataset": "data/robotwin/move_pillbottle_pad/move_pillbottle_pad_panthera_single_dr",
+        "episode_index": 296
+      },
+      {
+        "dataset": "data/robotwin/move_pillbottle_pad/move_pillbottle_pad_panthera_single_dr",
+        "episode_index": 297
+      }
+    ]
+  },
+  "panthera": {
+    "action": {
+      "min": [
+        -0.6870236992835999,
+        0.0,
+        0.0,
+        -1.4137794971466064,
+        -0.683934211730957,
+        -0.9280074238777161,
+        0.0
+      ],
+      "max": [
+        0.6932990550994873,
+        3.1741907596588135,
+        3.7153079509735107,
+        0.0,
+        0.663680911064148,
+        0.856800377368927,
+        1.0
+      ],
+      "mean": [
+        0.011913386173546314,
+        1.6518018245697021,
+        1.322693109512329,
+        -0.41950979828834534,
+        0.005178174469619989,
+        -0.0007095327018760145,
+        0.46094298362731934
+      ],
+      "std": [
+        0.27093395590782166,
+        0.5871541500091553,
+        0.5346173048019409,
+        0.21293595433235168,
+        0.3342592716217041,
+        0.37021780014038086,
+        0.4754107892513275
+      ]
+    },
+    "state": {
+      "min": [
+        -0.6870236992835999,
+        0.0,
+        0.0,
+        -1.4137794971466064,
+        -0.683934211730957,
+        -0.9280074238777161,
+        0.0
+      ],
+      "max": [
+        0.6932990550994873,
+        3.1741907596588135,
+        3.7153079509735107,
+        0.0,
+        0.663680911064148,
+        0.856800377368927,
+        1.0
+      ],
+      "mean": [
+        0.011913386173546314,
+        1.6518018245697021,
+        1.322693109512329,
+        -0.41950979828834534,
+        0.005178174469619989,
+        -0.0007095327018760145,
+        0.46094298362731934
+      ],
+      "std": [
+        0.27093395590782166,
+        0.5871541500091553,
+        0.5346173048019409,
+        0.21293595433235168,
+        0.3342592716217041,
+        0.37021780014038086,
+        0.4754107892513275
+      ]
+    }
+  }
+}
